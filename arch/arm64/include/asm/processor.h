@@ -33,6 +33,7 @@
 #include <asm/hw_breakpoint.h>
 #include <asm/ptrace.h>
 #include <asm/types.h>
+#include <asm/pgtable-hwdef.h>
 
 #ifdef __KERNEL__
 #define STACK_TOP_MAX		TASK_SIZE_64
