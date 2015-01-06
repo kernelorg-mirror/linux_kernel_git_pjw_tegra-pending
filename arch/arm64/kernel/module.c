@@ -27,6 +27,7 @@
 #include <linux/vmalloc.h>
 #include <asm/insn.h>
 #include <asm/sections.h>
+#include <asm/alternative.h>
 
 #define	AARCH64_INSN_IMM_MOVNZ		AARCH64_INSN_IMM_MAX
 #define	AARCH64_INSN_IMM_MOVK		AARCH64_INSN_IMM_16
