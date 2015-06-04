@@ -92,6 +92,10 @@ static inline void tegra_smmu_remove(struct tegra_smmu *smmu)
 }
 #endif
 
+/* Some SoC-specific MC_ERR_STATUS register bitfields */
+#define T30_MC_ERR_STATUS_CLIENT_MASK	0x7f
+#define T210_MC_ERR_STATUS_CLIENT_MASK	0xff
+
 struct tegra_mc_soc {
 	const struct tegra_mc_client *clients;
 	unsigned int num_clients;
@@ -101,6 +105,8 @@ struct tegra_mc_soc {
 
 	unsigned int num_address_bits;
 	unsigned int atom_size;
+
+	u8 client_id_mask;
 
 	const struct tegra_smmu_soc *smmu;
 };
